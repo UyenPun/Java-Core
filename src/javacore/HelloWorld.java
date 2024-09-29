@@ -2,12 +2,18 @@ package javacore;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		int a = 6;
-		int b = 9;
-		int c = a + b;
-		System.out.println("Sum: " + c);
+		// in ra kết quả nhưng "không xuống dòng": print
+		System.out.print("Hi");
 
-		int test1 = 5 + 9 * 3 - 10 / 2; // Nhân chia trước cộng trừ sau
-		System.out.println("test1: " + test1);
+		// in ra kết quả rồi xuống dòng: print line
+		System.out.println("Hello");
+
+		// in ra kết quả có định dạng: print format
+		System.out.printf("có %d người đăng ký", 40000);
+		// %d: số nguyên
+		// %f: số thực
+		// - mặc định là 6 số lẻ
+		// %.3f định dạng 3 số lẻ
+		// %s: chuỗi
 	}
 }
