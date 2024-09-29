@@ -1,19 +1,24 @@
 package javacore;
 
+import java.util.Scanner;
+
 public class HelloWorld {
 	public static void main(String[] args) {
-		// in ra kết quả nhưng "không xuống dòng": print
-		System.out.print("Hi");
+		int age = 10;
+		String name = "John";
+		System.out.println("My age: " + age + ", My name: " + name);
 
-		// in ra kết quả rồi xuống dòng: print line
-		System.out.println("Hello");
+//		2. Nhập từ bàn phím: java.util.Scanner là công cụ được java hỗ trợ sẵn, dùng để nhập dữ liệu từ bàn phím
+//		scanner.nextLine() => nhận 1 dòng nhập từ bàn phím => trả ra dữ liệu string
+//		scanner.nextInt() => nhận 1 số nguyên từ bàn phím => trả ra dữ liệu số nguyên
+//		scanner.nextDouble() => nhận 1 số thực từ bàn phím => trả ra dữ liệu số thực
 
-		// in ra kết quả có định dạng: print format
-		System.out.printf("có %d người đăng ký", 40000);
-		// %d: số nguyên
-		// %f: số thực
-		// - mặc định là 6 số lẻ
-		// %.3f định dạng 3 số lẻ
-		// %s: chuỗi
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Your name is: ");
+		String name2 = scanner.nextLine();
+		System.out.println("Your age is: ");
+		int age2 = scanner.nextInt();
+		System.out.println("My name is " + name2 + ", age = " + age2);
+		scanner.close();
 	}
 }
