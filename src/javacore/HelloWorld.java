@@ -1,43 +1,32 @@
 package javacore;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		// For
-		for (int i = 0; i < 5; i++) {
-			System.out.print(i + " ");
+		// CÁCH 1:
+		String[] cars = { "Volvo", "BMW", "Ford", "Mazda" }; // 0 1 2 (Không thể thêm phân tử or xóa đi)
+
+		System.out.println("Length: " + cars.length); // độ dài
+		System.out.println("Phan tu: " + cars[0]); // phần tử
+		System.out.println(Arrays.toString(cars)); // in ra mảng
+
+		// Loop Through an Array (duyệt tất cả phần tử của mảng)
+		for (int i = 0; i < cars.length; i++) {
+			System.out.println(cars[i]);
 		}
 
-		// While: kiểm tra đúng mới chạy
-		int i = 0;
-		while (i < 5) {
+		// ForEach:
+		for (String i : cars) {
 			System.out.println(i);
-			i++;
 		}
 
-		// Do-While: chạy tối thiểu 1 lần
-		int x = 0;
-		do {
-			System.out.println(x);
-			x++;
-		} while (x < 5);
+		// CÁCH 2:
+		String[] car = new String[5]; // khai báo mảng có 5 phần tử
+		car[0] = "1";
 
-		// Break: thoát ra vòng lặp
-		for (int k = 0; k < 10; k++) {
-			if (k == 4) {
-				break;
-			}
-			System.out.println(k); // 0 1 2 3
-		}
+		System.out.println(car[0]);
 
-		// Continue: thoát ra vòng lặp khỏi vị trí if thôi xong tiếp tục ( thoát ra khỏi
-		// vòng lặp đk đó)
-		for (int m = 0; m < 10; m++) {
-			if (m == 4) {
-				continue;
-			}
-			System.out.println(m); // 0 1 2 3 5 6 7 8 9
-		}
 	}
 }
