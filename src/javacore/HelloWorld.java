@@ -4,43 +4,75 @@ import java.util.Scanner;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		int score = 10;
-
-		// Neu True moi in ra
-		if (score > 5) {
-			System.out.println("Qua mon");
-		}
-		// Nếu dk trên không xảy ra thì dk phủ định của nó là else
-		else {
-			System.out.println("Rot mon");
-
-		}
-
-		// System.out.println("Run here: " + (score == 5));
-
-		System.out.println("============================= Bai Tap =============================");
-
-		// Viết chương trình cho phép nhập vào số tiền thuế (đơn vị là triệu đồng), và
-		// in ra kết quả:
-		// - dưới 10M: không đóng thuế
-		// - từ 10M tới 15M: thuế 10%
-		// - từ 15 tới 30M : thuế 20%
-		// - trên 30M: thuế 50%
-		// Ví dụ: nhập vào 25M -> in ra kết quả "thuế 20%
-		// tax: tien thue
-
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Nhap so tax: ");
-		double tax = scanner.nextDouble();
-
-		if (tax < 10_000_000) {
-			System.out.println("Khong dong thue");
-		} else if (tax >= 10_000_000 && tax < 15_000_000) {
-			System.out.println("Thue 10%");
-		} else if (tax >= 15_000_000 && tax < 30_000_000) {
-			System.out.println("Thue 20%");
-		} else if (tax >= 30_000_000) {
-			System.out.println("Thue 50%");
+		System.out.print("Nhap vao ngay: ");
+		int day = scanner.nextInt();
+		switch (day) {
+			case 1:
+				System.out.println("Monday");
+				break;
+			case 2:
+				System.out.println("Tuesday");
+				break;
+			case 3:
+				System.out.println("Wednesday");
+				break;
+			case 4:
+				System.out.println("Thursday");
+				break;
+			case 5:
+				System.out.println("Friday");
+				break;
+			case 6:
+				System.out.println("Saturday");
+				break;
+			case 7:
+				System.out.println("Sunday");
+				break;
+			default:
+				System.out.println("Don't know");
 		}
+
+		// Bai Tap:
+		System.out.println("================================================");
+		// Bài tập: Viết chương trình lựa chọn chức năng
+		// System.out.println(">> LỰA CHỌN TÍNH NĂNG <<");
+		// System.out.println("++ ------------------ ++");
+		// System.out.println("| 1. Cộng |");
+		// System.out.println("| 2. Trừ |");
+		// System.out.println("| 3. Kết thúc |");
+		// System.out.println("++ ------------------ ++");
+		// Scanner scanner = new Scanner(System.in);
+		// System.out.println("Lựa chọn của bạn là : ");
+		// Yêu cầu:
+		// Nếu nhập vào 1 => in ra "Bạn đã lựa chọn phép cộng"
+		// Nếu nhập vào 2 => in ra "Bạn đã lựa chọn phép trừ"
+		// Nếu nhập vào 3 => in ra "Bạn đã lựa chọn thoát chương trình" =>
+		// System.exit(0);
+		System.out.println(">> LUA CHON TINH NANG <<");
+		System.out.println("++ ------------------ ++");
+		System.out.println("| 1. Cong              |");
+		System.out.println("| 2. Tru               |");
+		System.out.println("| 3. Ket thuc          |");
+
+		System.out.print("Lua chon cua ban la: ");
+		int tinhNang = scanner.nextInt();
+
+		switch (tinhNang) {
+			case 1:
+				System.out.println("Ban da lua chon phep cong");
+				break;
+			case 2:
+				System.out.println("Ban da lua chon phep tru");
+				break;
+			default:
+				System.out.println("Lua chon thoat chuong trinh");
+				System.exit(0);
+				break;
+		}
+
+		int value = scanner.nextInt(); // check xem co thoat ra khong
+
+		scanner.close();
 	}
 }
