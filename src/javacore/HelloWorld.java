@@ -4,75 +4,40 @@ import java.util.Scanner;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("Nhap vao ngay: ");
-		int day = scanner.nextInt();
-		switch (day) {
-			case 1:
-				System.out.println("Monday");
-				break;
-			case 2:
-				System.out.println("Tuesday");
-				break;
-			case 3:
-				System.out.println("Wednesday");
-				break;
-			case 4:
-				System.out.println("Thursday");
-				break;
-			case 5:
-				System.out.println("Friday");
-				break;
-			case 6:
-				System.out.println("Saturday");
-				break;
-			case 7:
-				System.out.println("Sunday");
-				break;
-			default:
-				System.out.println("Don't know");
+		// For
+		for (int i = 0; i < 5; i++) {
+			System.out.print(i + " ");
 		}
 
-		// Bai Tap:
-		System.out.println("================================================");
-		// Bài tập: Viết chương trình lựa chọn chức năng
-		// System.out.println(">> LỰA CHỌN TÍNH NĂNG <<");
-		// System.out.println("++ ------------------ ++");
-		// System.out.println("| 1. Cộng |");
-		// System.out.println("| 2. Trừ |");
-		// System.out.println("| 3. Kết thúc |");
-		// System.out.println("++ ------------------ ++");
-		// Scanner scanner = new Scanner(System.in);
-		// System.out.println("Lựa chọn của bạn là : ");
-		// Yêu cầu:
-		// Nếu nhập vào 1 => in ra "Bạn đã lựa chọn phép cộng"
-		// Nếu nhập vào 2 => in ra "Bạn đã lựa chọn phép trừ"
-		// Nếu nhập vào 3 => in ra "Bạn đã lựa chọn thoát chương trình" =>
-		// System.exit(0);
-		System.out.println(">> LUA CHON TINH NANG <<");
-		System.out.println("++ ------------------ ++");
-		System.out.println("| 1. Cong              |");
-		System.out.println("| 2. Tru               |");
-		System.out.println("| 3. Ket thuc          |");
-
-		System.out.print("Lua chon cua ban la: ");
-		int tinhNang = scanner.nextInt();
-
-		switch (tinhNang) {
-			case 1:
-				System.out.println("Ban da lua chon phep cong");
-				break;
-			case 2:
-				System.out.println("Ban da lua chon phep tru");
-				break;
-			default:
-				System.out.println("Lua chon thoat chuong trinh");
-				System.exit(0);
-				break;
+		// While: kiểm tra đúng mới chạy
+		int i = 0;
+		while (i < 5) {
+			System.out.println(i);
+			i++;
 		}
 
-		int value = scanner.nextInt(); // check xem co thoat ra khong
+		// Do-While: chạy tối thiểu 1 lần
+		int x = 0;
+		do {
+			System.out.println(x);
+			x++;
+		} while (x < 5);
 
-		scanner.close();
+		// Break: thoát ra vòng lặp
+		for (int k = 0; k < 10; k++) {
+			if (k == 4) {
+				break;
+			}
+			System.out.println(k); // 0 1 2 3
+		}
+
+		// Continue: thoát ra vòng lặp khỏi vị trí if thôi xong tiếp tục ( thoát ra khỏi
+		// vòng lặp đk đó)
+		for (int m = 0; m < 10; m++) {
+			if (m == 4) {
+				continue;
+			}
+			System.out.println(m); // 0 1 2 3 5 6 7 8 9
+		}
 	}
 }
