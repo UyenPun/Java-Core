@@ -4,21 +4,27 @@ import java.util.Scanner;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		int age = 10;
-		String name = "John";
-		System.out.println("My age: " + age + ", My name: " + name);
+		// Min or Max
+		int a = 5;
+		int b = 6;
+		int c = Math.max(a, b);
+		System.out.println("Max = " + c);
 
-//		2. Nhập từ bàn phím: java.util.Scanner là công cụ được java hỗ trợ sẵn, dùng để nhập dữ liệu từ bàn phím
-//		scanner.nextLine() => nhận 1 dòng nhập từ bàn phím => trả ra dữ liệu string
-//		scanner.nextInt() => nhận 1 số nguyên từ bàn phím => trả ra dữ liệu số nguyên
-//		scanner.nextDouble() => nhận 1 số thực từ bàn phím => trả ra dữ liệu số thực
+		// Lũy thừa
+		double d = 2;
+		double e = 2;
+		double f = Math.pow(d, e);
+		System.out.println("Pow = " + f);
 
+		// Thực hành
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Your name is: ");
-		String name2 = scanner.nextLine();
-		System.out.println("Your age is: ");
-		int age2 = scanner.nextInt();
-		System.out.println("My name is " + name2 + ", age = " + age2);
+		System.out.print("First number: ");
+		int num1 = scanner.nextInt();
+
+		System.out.print("Second number: ");
+		int num2 = scanner.nextInt();
+		System.out.println("Min = " + Math.min(num1, num2));
 		scanner.close();
+
 	}
 }
