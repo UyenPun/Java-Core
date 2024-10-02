@@ -18,7 +18,7 @@ public class Main33 {
 
     System.out.println(arrayList.toString() + " " + arrayList.size());
 
-    // Cach 2: cho phép add thêm đúng type mong muốn
+    // Cach 2: cho phép add thêm đúng type mong muốn - Generic
     ArrayList<Integer> arrayList2 = new ArrayList<Integer>();
     // ArrayList<String> arrayList2 = new ArrayList<String>();
     arrayList.add(3);
