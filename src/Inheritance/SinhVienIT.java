@@ -3,6 +3,11 @@ package Inheritance;
 public class SinhVienIT extends SinhVien {
   private String language;
 
+  @Override
+  void tinhDiem() {
+    // TODO Auto-generated method stub
+  }
+
   public SinhVienIT(String language, String id, String name, double price, double tax) {
     super(id, name, price, tax);
     this.language = language;
